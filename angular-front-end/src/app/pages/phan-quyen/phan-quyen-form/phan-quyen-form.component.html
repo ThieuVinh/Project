@@ -1,0 +1,20 @@
+<div class="container">
+    <h3 class="text-primary">Danh sách quyền</h3>
+    <form class="mt-3" [formGroup]="formGroup">
+        <section class="example-section" style="font-size: 20px">
+            <mat-checkbox class="example-margin" name="query" (click)="getIdSelected(1)" formControlName="query">Truy vấn</mat-checkbox><br>
+            <mat-checkbox class="example-margin" name="insert" (click)="getIdSelected(2)" formControlName="insert">Thêm mới</mat-checkbox><br>
+            <mat-checkbox class="example-margin" name="update" (click)="getIdSelected(3)" formControlName="update">Cập nhật</mat-checkbox><br>
+            <mat-checkbox class="example-margin" name="delete" (click)="getIdSelected(4)" formControlName="delete">Xóa</mat-checkbox><br>
+            <mat-checkbox class="example-margin" name="admin" (click)="getIdSelected(5)" formControlName="admin">Admin</mat-checkbox>
+        </section>
+        <div class="mt-2">
+            <button class="btn btn-sm btn-outline-success mg-r-2" (click)="onSubmit()">
+                <span class="material-icons text-center align-middle">save</span>Lưu
+            </button>
+            <button class="btn btn-sm btn-outline-danger mg-r-2" (click)="onDismiss()">
+                <span class="material-icons text-center align-middle">remove</span>Hủy bỏ
+            </button>
+        </div>
+    </form>
+</div>
